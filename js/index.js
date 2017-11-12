@@ -21,6 +21,7 @@ $(document).ready(function(){
       result.push($target);
       screen.append($target);
     }
+    
   }
 
   function evaluate(){
@@ -36,8 +37,11 @@ $(document).ready(function(){
       screen.append("SYNTAX ERROR");
     }else{
       let sum = eval(resultString);
+      result = [];
+      result.push(sum);
       screen.empty()
       screen.append(sum)
+
     }
   }
 
